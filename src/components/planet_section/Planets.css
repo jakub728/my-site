@@ -1,0 +1,1415 @@
+.planets {
+  position: relative;
+  top: -170px;
+}
+
+.sun {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  display: block;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.mercury {
+  position: absolute;
+  top: 50%;
+  left: 72px;
+  height: 45px;
+  width: 45px;
+  animation: ellipticalOrbitMercury 30s linear infinite;
+  animation-delay: -10s;
+  z-index: 1001;
+}
+
+.venus {
+  position: absolute;
+  top: 45%;
+  left: 50px;
+  height: 60px;
+  width: 60px;
+  animation: ellipticalOrbitVenus 50s linear infinite;
+  animation-delay: -45s;
+  z-index: 1002;
+}
+
+.earth {
+  position: absolute;
+  top: 45%;
+  left: 30px;
+  height: 72px;
+  width: 72px;
+  animation: ellipticalOrbitEarth 70s linear infinite;
+  animation-delay: -20s;
+  z-index: 1003;
+}
+
+.mars {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  height: 65px;
+  width: 65px;
+  animation: ellipticalOrbitMars 90s linear infinite;
+  z-index: 1004;
+}
+
+.jupiter {
+  position: absolute;
+  top: 50%;
+  left: -35px;
+  height: 150px;
+  width: 150px;
+  animation: ellipticalOrbitJupiter 150s linear infinite;
+  animation-delay: -120s;
+  z-index: 1005;
+}
+
+.saturn {
+  position: absolute;
+  top: 60%;
+  left: -80px;
+  height: 132px;
+  width: 222px;
+  animation: ellipticalOrbitSaturn 180s linear infinite;
+  animation-delay: -120s;
+  z-index: 1006;
+}
+
+.uranus {
+  position: absolute;
+  top: 70%;
+  left: -30px;
+  height: 84px;
+  width: 84px;
+  animation: ellipticalOrbitUranus 210s linear infinite;
+  z-index: 1007;
+}
+
+.neptune {
+  position: absolute;
+  top: 70%;
+  left: -45px;
+  height: 81px;
+  width: 81px;
+  animation: ellipticalOrbitNeptune 270s linear infinite;
+  animation-delay: -120s;
+  z-index: 1008;
+}
+
+.mercury:hover,
+.venus:hover,
+.earth:hover,
+.mars:hover,
+.jupiter:hover,
+.saturn:hover,
+.uranus:hover,
+.neptune:hover {
+  filter: brightness(120%) !important;
+  cursor: pointer;
+}
+
+.description-on {
+  display: block;
+  position: absolute;
+  text-align: center;
+  font-weight: 900;
+  z-index: 4000;
+  font-size: 2rem;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  text-shadow: 5px 5px 10px whitesmoke, -5px -5px 10px whitesmoke,
+    5px -5px 10px whitesmoke, -5px 5px 10px whitesmoke;
+}
+
+.description-off {
+  display: none;
+}
+
+/* Animations */
+
+@keyframes ellipticalOrbitMercury {
+  0% {
+    transform: translate(300px, 0px) scale(0.82);
+    filter: brightness(80%);
+  }
+  2.78% {
+    transform: translate(296px, 21.67px) scale(0.84);
+    z-index: 1001;
+  }
+  5.56% {
+    transform: translate(285px, 43.33px) scale(0.86);
+    z-index: 1001;
+  }
+  8.33% {
+    transform: translate(265px, 64.17px) scale(0.88);
+    z-index: 1001;
+  }
+  11.11% {
+    transform: translate(238px, 83.33px) scale(0.9);
+    z-index: 1001;
+    filter: brightness(70%);
+  }
+  13.89% {
+    transform: translate(206px, 100.83px) scale(0.94);
+    z-index: 1001;
+  }
+  16.67% {
+    transform: translate(169px, 115.83px) scale(0.98);
+    z-index: 1001;
+  }
+  19.44% {
+    transform: translate(130px, 120.83px) scale(1.02);
+    z-index: 1001;
+  }
+  22.22% {
+    transform: translate(90px, 125px) scale(1.06);
+    z-index: 1001;
+  }
+  25% {
+    transform: translate(50px, 125px) scale(1.1);
+    z-index: 1001;
+    filter: brightness(65%);
+  }
+  27.78% {
+    transform: translate(10px, 123.33px) scale(1.06);
+    z-index: 1001;
+  }
+  30.56% {
+    transform: translate(-30px, 119.17px) scale(1.02);
+    z-index: 1001;
+  }
+  33.33% {
+    transform: translate(-70px, 108.33px) scale(0.98);
+    z-index: 1001;
+  }
+  36.11% {
+    transform: translate(-108px, 94.17px) scale(0.94);
+    z-index: 1001;
+  }
+  38.89% {
+    transform: translate(-141px, 78.33px) scale(0.9);
+    z-index: 1001;
+    filter: brightness(70%);
+  }
+  41.67% {
+    transform: translate(-170px, 60px) scale(0.88);
+  }
+  44.44% {
+    transform: translate(-192px, 39.17px) scale(0.86);
+  }
+  47.22% {
+    transform: translate(-208px, 17.5px) scale(0.84);
+  }
+  50% {
+    transform: translate(-216px, 0px) scale(0.82);
+    z-index: 8;
+    filter: brightness(80%);
+  }
+  52.78% {
+    transform: translate(-208px, -17.5px) scale(0.8);
+    z-index: 8;
+  }
+  55.56% {
+    transform: translate(-192px, -39.17px) scale(0.78);
+    z-index: 8;
+  }
+  58.33% {
+    transform: translate(-170px, -60px) scale(0.76);
+    z-index: 8;
+  }
+  61.11% {
+    transform: translate(-141px, -78.33px) scale(0.74);
+    z-index: 8;
+    filter: brightness(90%);
+  }
+  63.89% {
+    transform: translate(-108px, -94.17px) scale(0.72);
+    z-index: 8;
+  }
+  66.67% {
+    transform: translate(-70px, -108.33px) scale(0.7);
+    z-index: 8;
+  }
+  69.44% {
+    transform: translate(-30px, -119.17px) scale(0.68);
+    z-index: 8;
+  }
+  72.22% {
+    transform: translate(10px, -123.33px) scale(0.66);
+    z-index: 8;
+  }
+  75% {
+    transform: translate(50px, -125px) scale(0.64);
+    z-index: 8;
+    filter: brightness(110%);
+  }
+  77.78% {
+    transform: translate(90px, -125px) scale(0.66);
+    z-index: 8;
+  }
+  80.56% {
+    transform: translate(130px, -120.83px) scale(0.68);
+    z-index: 8;
+  }
+  83.33% {
+    transform: translate(169px, -115.83px) scale(0.7);
+    z-index: 8;
+  }
+  86.11% {
+    transform: translate(206px, -100.83px) scale(0.72);
+    z-index: 8;
+  }
+  88.89% {
+    transform: translate(238px, -83.33px) scale(0.74);
+    z-index: 8;
+    filter: brightness(90%);
+  }
+  91.67% {
+    transform: translate(265px, -64.17px) scale(0.76);
+    z-index: 8;
+  }
+  94.44% {
+    transform: translate(285px, -43.33px) scale(0.78);
+    z-index: 8;
+  }
+  97.22% {
+    transform: translate(296px, -21.67px) scale(0.8);
+    z-index: 8;
+  }
+  100% {
+    transform: translate(300px, 0px) scale(0.82);
+    z-index: 8;
+    filter: brightness(80%);
+  }
+}
+
+@keyframes ellipticalOrbitVenus {
+  0% {
+    transform: translate(400px, 0px) scale(0.82);
+    z-index: 1002;
+    filter: brightness(80%);
+  }
+  2.78% {
+    transform: translate(394.67px, 26px) scale(0.84);
+    z-index: 1002;
+  }
+  5.56% {
+    transform: translate(380px, 52px) scale(0.86);
+    z-index: 1002;
+  }
+  8.33% {
+    transform: translate(353.33px, 77px) scale(0.88);
+    z-index: 1002;
+  }
+  11.11% {
+    transform: translate(317.33px, 100px) scale(0.9);
+    z-index: 1002;
+    filter: brightness(70%);
+  }
+  13.89% {
+    transform: translate(274.67px, 121px) scale(0.94);
+    z-index: 1002;
+  }
+  16.67% {
+    transform: translate(225.33px, 139px) scale(0.98);
+    z-index: 1002;
+  }
+  19.44% {
+    transform: translate(173.33px, 145px) scale(1.02);
+    z-index: 1002;
+  }
+  22.22% {
+    transform: translate(120px, 150px) scale(1.06);
+    z-index: 1002;
+  }
+  25% {
+    transform: translate(66.67px, 150px) scale(1.1);
+    z-index: 1002;
+    filter: brightness(65%);
+  }
+  27.78% {
+    transform: translate(13.33px, 148px) scale(1.06);
+    z-index: 1002;
+  }
+  30.56% {
+    transform: translate(-40px, 143px) scale(1.02);
+    z-index: 1002;
+  }
+  33.33% {
+    transform: translate(-93.33px, 130px) scale(0.98);
+    z-index: 1002;
+  }
+  36.11% {
+    transform: translate(-144px, 113px) scale(0.94);
+    z-index: 1002;
+  }
+  38.89% {
+    transform: translate(-188px, 94px) scale(0.9);
+    z-index: 1002;
+    filter: brightness(70%);
+  }
+  41.67% {
+    transform: translate(-226.67px, 72px) scale(0.88);
+  }
+  44.44% {
+    transform: translate(-256px, 47px) scale(0.86);
+  }
+  47.22% {
+    transform: translate(-277.33px, 21px) scale(0.84);
+    z-index: 7;
+  }
+  50% {
+    transform: translate(-288px, 0px) scale(0.82);
+    z-index: 7;
+    filter: brightness(80%);
+  }
+  52.78% {
+    transform: translate(-277.33px, -21px) scale(0.8);
+    z-index: 7;
+  }
+  55.56% {
+    transform: translate(-256px, -47px) scale(0.78);
+    z-index: 7;
+  }
+  58.33% {
+    transform: translate(-226.67px, -72px) scale(0.76);
+    z-index: 7;
+  }
+  61.11% {
+    transform: translate(-188px, -94px) scale(0.74);
+    z-index: 7;
+    filter: brightness(90%);
+  }
+  63.89% {
+    transform: translate(-144px, -113px) scale(0.72);
+    z-index: 7;
+  }
+  66.67% {
+    transform: translate(-93.33px, -130px) scale(0.7);
+    z-index: 7;
+  }
+  69.44% {
+    transform: translate(-40px, -143px) scale(0.68);
+    z-index: 7;
+  }
+  72.22% {
+    transform: translate(13.33px, -148px) scale(0.66);
+    z-index: 7;
+  }
+  75% {
+    transform: translate(66.67px, -150px) scale(0.64);
+    z-index: 7;
+    filter: brightness(110%);
+  }
+  77.78% {
+    transform: translate(120px, -150px) scale(0.66);
+    z-index: 7;
+  }
+  80.56% {
+    transform: translate(173.33px, -145px) scale(0.68);
+    z-index: 7;
+  }
+  83.33% {
+    transform: translate(225.33px, -139px) scale(0.7);
+    z-index: 7;
+  }
+  86.11% {
+    transform: translate(274.67px, -121px) scale(0.72);
+    z-index: 7;
+  }
+  88.89% {
+    transform: translate(317.33px, -100px) scale(0.74);
+    z-index: 7;
+    filter: brightness(90%);
+  }
+  91.67% {
+    transform: translate(353.33px, -77px) scale(0.76);
+    z-index: 7;
+  }
+  94.44% {
+    transform: translate(380px, -52px) scale(0.78);
+    z-index: 7;
+  }
+  97.22% {
+    transform: translate(394.67px, -26px) scale(0.8);
+    z-index: 7;
+  }
+  100% {
+    transform: translate(400px, 0px) scale(0.82);
+    z-index: 7;
+    filter: brightness(80%);
+  }
+}
+
+@keyframes ellipticalOrbitEarth {
+  0% {
+    transform: translate(500px, 0px) scale(0.82);
+    z-index: 1003;
+    filter: brightness(80%);
+  }
+  2.78% {
+    transform: translate(493.33px, 31.2px) scale(0.84);
+    z-index: 1003;
+  }
+  5.56% {
+    transform: translate(475px, 62.4px) scale(0.86);
+    z-index: 1003;
+  }
+  8.33% {
+    transform: translate(441.67px, 92.4px) scale(0.88);
+    z-index: 1003;
+  }
+  11.11% {
+    transform: translate(396.67px, 120px) scale(0.9);
+    z-index: 1003;
+    filter: brightness(70%);
+  }
+  13.89% {
+    transform: translate(343.33px, 145.2px) scale(0.94);
+    z-index: 1003;
+  }
+  16.67% {
+    transform: translate(281.67px, 166.8px) scale(0.98);
+    z-index: 1003;
+  }
+  19.44% {
+    transform: translate(216.67px, 174px) scale(1.02);
+    z-index: 1003;
+  }
+  22.22% {
+    transform: translate(150px, 180px) scale(1.06);
+    z-index: 1003;
+  }
+  25% {
+    transform: translate(83.33px, 180px) scale(1.1);
+    z-index: 1003;
+    filter: brightness(65%);
+  }
+  27.78% {
+    transform: translate(16.67px, 177.6px) scale(1.06);
+    z-index: 1003;
+  }
+  30.56% {
+    transform: translate(-50px, 171.6px) scale(1.02);
+    z-index: 1003;
+  }
+  33.33% {
+    transform: translate(-116.67px, 156px) scale(0.98);
+    z-index: 1003;
+  }
+  36.11% {
+    transform: translate(-180px, 135.6px) scale(0.94);
+    z-index: 1003;
+  }
+  38.89% {
+    transform: translate(-235px, 112.8px) scale(0.9);
+    z-index: 1003;
+    filter: brightness(70%);
+  }
+  41.67% {
+    transform: translate(-283.33px, 86.4px) scale(0.88);
+  }
+  44.44% {
+    transform: translate(-320px, 56.4px) scale(0.86);
+  }
+  47.22% {
+    transform: translate(-346.67px, 25.2px) scale(0.84);
+  }
+  50% {
+    transform: translate(-360px, 0px) scale(0.82);
+    z-index: 6;
+    filter: brightness(80%);
+  }
+  52.78% {
+    transform: translate(-346.67px, -25.2px) scale(0.8);
+    z-index: 6;
+  }
+  55.56% {
+    transform: translate(-320px, -56.4px) scale(0.78);
+    z-index: 6;
+  }
+  58.33% {
+    transform: translate(-283.33px, -86.4px) scale(0.76);
+    z-index: 6;
+  }
+  61.11% {
+    transform: translate(-235px, -112.8px) scale(0.74);
+    z-index: 6;
+    filter: brightness(90%);
+  }
+  63.89% {
+    transform: translate(-180px, -135.6px) scale(0.72);
+    z-index: 6;
+  }
+  66.67% {
+    transform: translate(-116.67px, -156px) scale(0.7);
+    z-index: 6;
+  }
+  69.44% {
+    transform: translate(-50px, -171.6px) scale(0.68);
+    z-index: 6;
+  }
+  72.22% {
+    transform: translate(16.67px, -177.6px) scale(0.66);
+    z-index: 6;
+  }
+  75% {
+    transform: translate(83.33px, -180px) scale(0.64);
+    z-index: 6;
+    filter: brightness(110%);
+  }
+  77.78% {
+    transform: translate(150px, -180px) scale(0.66);
+    z-index: 6;
+  }
+  80.56% {
+    transform: translate(216.67px, -174px) scale(0.68);
+    z-index: 6;
+  }
+  83.33% {
+    transform: translate(281.67px, -166.8px) scale(0.7);
+    z-index: 6;
+  }
+  86.11% {
+    transform: translate(343.33px, -145.2px) scale(0.72);
+    z-index: 6;
+  }
+  88.89% {
+    transform: translate(396.67px, -120px) scale(0.74);
+    z-index: 6;
+    filter: brightness(90%);
+  }
+  91.67% {
+    transform: translate(441.67px, -92.4px) scale(0.76);
+    z-index: 6;
+  }
+  94.44% {
+    transform: translate(475px, -62.4px) scale(0.78);
+    z-index: 6;
+  }
+  97.22% {
+    transform: translate(493.33px, -31.2px) scale(0.8);
+    z-index: 6;
+  }
+  100% {
+    transform: translate(500px, 0px) scale(0.82);
+    z-index: 6;
+    filter: brightness(80%);
+  }
+}
+
+@keyframes ellipticalOrbitMars {
+  0% {
+    transform: translate(600px, 0px) scale(0.82);
+    z-index: 1004;
+    filter: brightness(80%);
+  }
+  2.78% {
+    transform: translate(592px, 36.4px) scale(0.84);
+    z-index: 1004;
+  }
+  5.56% {
+    transform: translate(570px, 72.8px) scale(0.86);
+    z-index: 1004;
+  }
+  8.33% {
+    transform: translate(530px, 107.8px) scale(0.88);
+    z-index: 1004;
+  }
+  11.11% {
+    transform: translate(476px, 140px) scale(0.9);
+    z-index: 1004;
+    filter: brightness(70%);
+  }
+  13.89% {
+    transform: translate(412px, 169.4px) scale(0.94);
+    z-index: 1004;
+  }
+  16.67% {
+    transform: translate(338px, 194.6px) scale(0.98);
+    z-index: 1004;
+  }
+  19.44% {
+    transform: translate(260px, 203px) scale(1.02);
+    z-index: 1004;
+  }
+  22.22% {
+    transform: translate(180px, 210px) scale(1.06);
+    z-index: 1004;
+  }
+  25% {
+    transform: translate(100px, 210px) scale(1.1);
+    z-index: 1004;
+    filter: brightness(65%);
+  }
+  27.78% {
+    transform: translate(20px, 207.2px) scale(1.06);
+    z-index: 1004;
+  }
+  30.56% {
+    transform: translate(-60px, 200.2px) scale(1.02);
+    z-index: 1004;
+  }
+  33.33% {
+    transform: translate(-140px, 182px) scale(0.98);
+    z-index: 1004;
+  }
+  36.11% {
+    transform: translate(-216px, 158.2px) scale(0.94);
+    z-index: 1004;
+  }
+  38.89% {
+    transform: translate(-282px, 131.6px) scale(0.9);
+    z-index: 1004;
+    filter: brightness(70%);
+  }
+  41.67% {
+    transform: translate(-340px, 100.8px) scale(0.88);
+    z-index: 1004;
+  }
+
+  44.44% {
+    transform: translate(-384px, 65.8px) scale(0.86);
+    z-index: 1004;
+  }
+  47.22% {
+    transform: translate(-416px, 29.4px) scale(0.84);
+    z-index: 1004;
+  }
+  50% {
+    transform: translate(-432px, 0px) scale(0.82);
+    z-index: 5;
+    filter: brightness(80%);
+  }
+  52.78% {
+    transform: translate(-416px, -29.4px) scale(0.8);
+    z-index: 5;
+  }
+  55.56% {
+    transform: translate(-384px, -65.8px) scale(0.78);
+    z-index: 5;
+  }
+  58.33% {
+    transform: translate(-340px, -100.8px) scale(0.76);
+    z-index: 5;
+  }
+  61.11% {
+    transform: translate(-282px, -131.6px) scale(0.74);
+    z-index: 5;
+    filter: brightness(90%);
+  }
+  63.89% {
+    transform: translate(-216px, -158.2px) scale(0.72);
+    z-index: 5;
+  }
+  66.67% {
+    transform: translate(-140px, -182px) scale(0.7);
+    z-index: 5;
+  }
+  69.44% {
+    transform: translate(-60px, -200.2px) scale(0.68);
+    z-index: 5;
+  }
+  72.22% {
+    transform: translate(20px, -207.2px) scale(0.66);
+    z-index: 5;
+  }
+  75% {
+    transform: translate(100px, -210px) scale(0.64);
+    z-index: 5;
+    filter: brightness(110%);
+  }
+  77.78% {
+    transform: translate(180px, -210px) scale(0.66);
+    z-index: 5;
+  }
+  80.56% {
+    transform: translate(260px, -203px) scale(0.68);
+    z-index: 5;
+  }
+  83.33% {
+    transform: translate(338px, -194.6px) scale(0.7);
+    z-index: 5;
+  }
+  86.11% {
+    transform: translate(412px, -169.4px) scale(0.72);
+    z-index: 5;
+  }
+  88.89% {
+    transform: translate(476px, -140px) scale(0.74);
+    z-index: 5;
+    filter: brightness(90%);
+  }
+  91.67% {
+    transform: translate(530px, -107.8px) scale(0.76);
+    z-index: 5;
+  }
+  94.44% {
+    transform: translate(570px, -72.8px) scale(0.78);
+    z-index: 5;
+  }
+  97.22% {
+    transform: translate(592px, -36.4px) scale(0.8);
+    z-index: 5;
+  }
+  100% {
+    transform: translate(600px, 0px) scale(0.82);
+    z-index: 5;
+  }
+}
+
+@keyframes ellipticalOrbitJupiter {
+  0% {
+    transform: translate(650px, 0px) scale(0.82);
+    z-index: 1005;
+    filter: brightness(80%);
+  }
+  2.78% {
+    transform: translate(641.33px, 41.6px) scale(0.84);
+    z-index: 1005;
+  }
+  5.56% {
+    transform: translate(617.5px, 83.2px) scale(0.86);
+    z-index: 1005;
+  }
+  8.33% {
+    transform: translate(574.17px, 123.2px) scale(0.88);
+    z-index: 1005;
+  }
+  11.11% {
+    transform: translate(515.67px, 160px) scale(0.9);
+    z-index: 1005;
+    filter: brightness(70%);
+  }
+  13.89% {
+    transform: translate(446.33px, 193.6px) scale(0.92);
+    z-index: 1005;
+  }
+  16.67% {
+    transform: translate(366.17px, 222.4px) scale(0.98);
+    z-index: 1005;
+  }
+  19.44% {
+    transform: translate(281.67px, 232px) scale(1.02);
+    z-index: 1005;
+  }
+  22.22% {
+    transform: translate(195px, 240px) scale(1.06);
+    z-index: 1005;
+  }
+  25% {
+    transform: translate(108.33px, 240px) scale(1.1);
+    z-index: 1005;
+    filter: brightness(65%);
+  }
+  27.78% {
+    transform: translate(21.67px, 236.8px) scale(1.06);
+    z-index: 1005;
+  }
+  30.56% {
+    transform: translate(-65px, 228.8px) scale(1.02);
+    z-index: 1005;
+  }
+  33.33% {
+    transform: translate(-151.67px, 208px) scale(0.98);
+    z-index: 1005;
+  }
+  36.11% {
+    transform: translate(-234px, 180.8px) scale(0.94);
+    z-index: 1005;
+  }
+  38.89% {
+    transform: translate(-305.5px, 150.4px) scale(0.9);
+    z-index: 1005;
+    filter: brightness(70%);
+  }
+  41.67% {
+    transform: translate(-368.33px, 115.2px) scale(0.88);
+    z-index: 1005;
+  }
+  44.44% {
+    transform: translate(-416px, 75.2px) scale(0.86);
+    z-index: 1005;
+  }
+  47.22% {
+    transform: translate(-450.67px, 33.6px) scale(0.84);
+    z-index: 1005;
+  }
+  50% {
+    transform: translate(-468px, 0px) scale(0.82);
+    z-index: 4;
+    filter: brightness(80%);
+  }
+  52.78% {
+    transform: translate(-450.67px, -33.6px) scale(0.8);
+    z-index: 4;
+  }
+  55.56% {
+    transform: translate(-416px, -75.2px) scale(0.78);
+    z-index: 4;
+  }
+  58.33% {
+    transform: translate(-368.33px, -115.2px) scale(0.76);
+    z-index: 4;
+  }
+  61.11% {
+    transform: translate(-305.5px, -150.4px) scale(0.74);
+    z-index: 4;
+    filter: brightness(90%);
+  }
+  63.89% {
+    transform: translate(-234px, -180.8px) scale(0.72);
+    z-index: 4;
+  }
+  66.67% {
+    transform: translate(-151.67px, -208px) scale(0.7);
+    z-index: 4;
+  }
+  69.44% {
+    transform: translate(-65px, -228.8px) scale(0.68);
+    z-index: 4;
+  }
+  72.22% {
+    transform: translate(21.67px, -236.8px) scale(0.66);
+    z-index: 4;
+  }
+  75% {
+    transform: translate(108.33px, -240px) scale(0.64);
+    z-index: 4;
+    filter: brightness(110%);
+  }
+  77.78% {
+    transform: translate(195px, -240px) scale(0.66);
+    z-index: 4;
+  }
+  80.56% {
+    transform: translate(281.67px, -232px) scale(0.68);
+    z-index: 4;
+  }
+  83.33% {
+    transform: translate(366.17px, -222.4px) scale(0.7);
+    z-index: 4;
+  }
+  86.11% {
+    transform: translate(446.33px, -193.6px) scale(0.72);
+    z-index: 4;
+  }
+  88.89% {
+    transform: translate(515.67px, -160px) scale(0.74);
+    z-index: 4;
+    filter: brightness(90%);
+  }
+  91.67% {
+    transform: translate(574.17px, -123.2px) scale(0.76);
+    z-index: 4;
+  }
+  94.44% {
+    transform: translate(617.5px, -83.2px) scale(0.78);
+    z-index: 4;
+  }
+  97.22% {
+    transform: translate(641.33px, -41.6px) scale(0.8);
+    z-index: 4;
+  }
+  100% {
+    transform: translate(650px, 0px) scale(0.82);
+    z-index: 4;
+    filter: brightness(80%);
+  }
+}
+
+@keyframes ellipticalOrbitSaturn {
+  0% {
+    transform: translate(700px, 0px) scale(0.82);
+    z-index: 1006;
+    filter: brightness(80%);
+  }
+  2.78% {
+    transform: translate(690.67px, 46.8px) scale(0.84);
+    z-index: 1006;
+  }
+  5.56% {
+    transform: translate(665px, 93.6px) scale(0.86);
+    z-index: 1006;
+  }
+  8.33% {
+    transform: translate(618.33px, 138.6px) scale(0.88);
+    z-index: 1006;
+  }
+  11.11% {
+    transform: translate(555.33px, 180px) scale(0.9);
+    z-index: 1006;
+    filter: brightness(70%);
+  }
+  13.89% {
+    transform: translate(480.67px, 217.8px) scale(0.94);
+    z-index: 1006;
+  }
+  16.67% {
+    transform: translate(394.33px, 250.2px) scale(0.98);
+    z-index: 1006;
+  }
+  19.44% {
+    transform: translate(303.33px, 261px) scale(1.02);
+    z-index: 1006;
+  }
+  22.22% {
+    transform: translate(210px, 270px) scale(1.06);
+    z-index: 1006;
+  }
+  25% {
+    transform: translate(116.67px, 270px) scale(1.1);
+    z-index: 1006;
+    filter: brightness(65%);
+  }
+  27.78% {
+    transform: translate(23.33px, 266.4px) scale(1.06);
+    z-index: 1006;
+  }
+  30.56% {
+    transform: translate(-70px, 257.4px) scale(1.02);
+    z-index: 1006;
+  }
+  33.33% {
+    transform: translate(-163.33px, 234px) scale(0.98);
+    z-index: 1006;
+  }
+  36.11% {
+    transform: translate(-252px, 203.4px) scale(0.94);
+    z-index: 1006;
+  }
+  38.89% {
+    transform: translate(-329px, 169.2px) scale(0.9);
+    z-index: 1006;
+    filter: brightness(70%);
+  }
+  41.67% {
+    transform: translate(-396.67px, 129.6px) scale(0.88);
+    z-index: 1006;
+  }
+  44.44% {
+    transform: translate(-448px, 84.6px) scale(0.86);
+    z-index: 1006;
+  }
+  47.22% {
+    transform: translate(-485.33px, 37.8px) scale(0.84);
+    z-index: 1006;
+  }
+  50% {
+    transform: translate(-504px, 0px) scale(0.82);
+    z-index: 3;
+    filter: brightness(80%);
+  }
+  52.78% {
+    transform: translate(-485.33px, -37.8px) scale(0.8);
+    z-index: 3;
+  }
+  55.56% {
+    transform: translate(-448px, -84.6px) scale(0.78);
+    z-index: 3;
+  }
+  58.33% {
+    transform: translate(-396.67px, -129.6px) scale(0.76);
+    z-index: 3;
+  }
+  61.11% {
+    transform: translate(-329px, -169.2px) scale(0.74);
+    z-index: 3;
+    filter: brightness(90%);
+  }
+  63.89% {
+    transform: translate(-252px, -203.4px) scale(0.72);
+    z-index: 3;
+  }
+  66.67% {
+    transform: translate(-163.33px, -234px) scale(0.7);
+    z-index: 3;
+  }
+  69.44% {
+    transform: translate(-70px, -257.4px) scale(0.68);
+    z-index: 3;
+  }
+  72.22% {
+    transform: translate(23.33px, -266.4px) scale(0.66);
+    z-index: 3;
+  }
+  75% {
+    transform: translate(116.67px, -270px) scale(0.64);
+    z-index: 3;
+    filter: brightness(110%);
+  }
+  77.78% {
+    transform: translate(210px, -270px) scale(0.66);
+    z-index: 3;
+  }
+  80.56% {
+    transform: translate(303.33px, -261px) scale(0.68);
+    z-index: 3;
+  }
+  83.33% {
+    transform: translate(394.33px, -250.2px) scale(0.7);
+    z-index: 3;
+  }
+  86.11% {
+    transform: translate(480.67px, -217.8px) scale(0.72);
+    z-index: 3;
+  }
+  88.89% {
+    transform: translate(555.33px, -180px) scale(0.74);
+    z-index: 3;
+    filter: brightness(90%);
+  }
+  91.67% {
+    transform: translate(618.33px, -138.6px) scale(0.76);
+    z-index: 3;
+  }
+  94.44% {
+    transform: translate(665px, -93.6px) scale(0.78);
+    z-index: 3;
+  }
+  97.22% {
+    transform: translate(690.67px, -46.8px) scale(0.8);
+    z-index: 3;
+  }
+  100% {
+    transform: translate(700px, 0px) scale(0.82);
+    z-index: 3;
+    filter: brightness(80%);
+  }
+}
+
+@keyframes ellipticalOrbitUranus {
+  0% {
+    transform: translate(800px, 0px) scale(0.82);
+    z-index: 1007;
+    filter: brightness(80%);
+  }
+  2.78% {
+    transform: translate(789.33px, 52px) scale(0.84);
+    z-index: 1007;
+  }
+  5.56% {
+    transform: translate(760px, 104px) scale(0.86);
+    z-index: 1007;
+  }
+  8.33% {
+    transform: translate(706.67px, 154px) scale(0.88);
+    z-index: 1007;
+  }
+  11.11% {
+    transform: translate(634.67px, 200px) scale(0.9);
+    z-index: 1007;
+    filter: brightness(70%);
+  }
+  13.89% {
+    transform: translate(549.33px, 242px) scale(0.94);
+    z-index: 1007;
+  }
+  16.67% {
+    transform: translate(450.67px, 278px) scale(0.98);
+    z-index: 1007;
+  }
+  19.44% {
+    transform: translate(346.67px, 290px) scale(1.02);
+    z-index: 1007;
+  }
+  22.22% {
+    transform: translate(240px, 300px) scale(1.06);
+    z-index: 1007;
+  }
+  25% {
+    transform: translate(133.33px, 300px) scale(1.1);
+    z-index: 1007;
+    filter: brightness(65%);
+  }
+  27.78% {
+    transform: translate(26.67px, 296px) scale(1.06);
+    z-index: 1007;
+  }
+  30.56% {
+    transform: translate(-80px, 286px) scale(1.02);
+    z-index: 1007;
+  }
+  33.33% {
+    transform: translate(-186.67px, 260px) scale(0.98);
+    z-index: 1007;
+  }
+  36.11% {
+    transform: translate(-288px, 226px) scale(0.94);
+    z-index: 1007;
+  }
+  38.89% {
+    transform: translate(-376px, 188px) scale(0.9);
+    z-index: 1007;
+    filter: brightness(70%);
+  }
+  41.67% {
+    transform: translate(-453.33px, 144px) scale(0.88);
+    z-index: 1007;
+  }
+  44.44% {
+    transform: translate(-512px, 94px) scale(0.86);
+    z-index: 1007;
+  }
+  47.22% {
+    transform: translate(-554.67px, 42px) scale(0.84);
+    z-index: 1007;
+  }
+  50% {
+    transform: translate(-576px, 0px) scale(0.82);
+    z-index: 2;
+    filter: brightness(80%);
+  }
+  52.78% {
+    transform: translate(-554.67px, -42px) scale(0.8);
+    z-index: 2;
+  }
+  55.56% {
+    transform: translate(-512px, -94px) scale(0.78);
+    z-index: 2;
+  }
+  58.33% {
+    transform: translate(-453.33px, -144px) scale(0.76);
+    z-index: 2;
+  }
+  61.11% {
+    transform: translate(-376px, -188px) scale(0.74);
+    z-index: 2;
+    filter: brightness(90%);
+  }
+  63.89% {
+    transform: translate(-288px, -226px) scale(0.72);
+    z-index: 2;
+  }
+  66.67% {
+    transform: translate(-186.67px, -260px) scale(0.7);
+    z-index: 2;
+  }
+  69.44% {
+    transform: translate(-80px, -286px) scale(0.68);
+    z-index: 2;
+  }
+  72.22% {
+    transform: translate(26.67px, -296px) scale(0.66);
+    z-index: 2;
+  }
+  75% {
+    transform: translate(133.33px, -300px) scale(0.64);
+    z-index: 2;
+    filter: brightness(110%);
+  }
+  77.78% {
+    transform: translate(240px, -300px) scale(0.66);
+    z-index: 2;
+  }
+  80.56% {
+    transform: translate(346.67px, -290px) scale(0.68);
+    z-index: 2;
+  }
+  83.33% {
+    transform: translate(450.67px, -278px) scale(0.7);
+    z-index: 2;
+  }
+  86.11% {
+    transform: translate(549.33px, -242px) scale(0.72);
+    z-index: 2;
+  }
+  88.89% {
+    transform: translate(634.67px, -200px) scale(0.74);
+    z-index: 2;
+    filter: brightness(90%);
+  }
+  91.67% {
+    transform: translate(706.67px, -154px) scale(0.76);
+    z-index: 2;
+  }
+  94.44% {
+    transform: translate(760px, -104px) scale(0.78);
+    z-index: 2;
+  }
+  97.22% {
+    transform: translate(789.33px, -52px) scale(0.8);
+    z-index: 2;
+  }
+  100% {
+    transform: translate(800px, 0px) scale(0.82);
+    z-index: 2;
+    filter: brightness(80%);
+  }
+}
+
+@keyframes ellipticalOrbitNeptune {
+  0% {
+    transform: translate(900px, 0px) scale(0.82);
+    filter: brightness(80%);
+  }
+  2.78% {
+    transform: translate(888px, 57.2px) scale(0.84);
+    z-index: 1008;
+  }
+  5.56% {
+    transform: translate(855px, 114.4px) scale(0.86);
+    z-index: 1008;
+  }
+  8.33% {
+    transform: translate(795px, 169.4px) scale(0.88);
+    z-index: 1008;
+  }
+  11.11% {
+    transform: translate(714px, 220px) scale(0.9);
+    z-index: 1008;
+    filter: brightness(70%);
+  }
+  13.89% {
+    transform: translate(618px, 266.2px) scale(0.92);
+    z-index: 1008;
+  }
+  16.67% {
+    transform: translate(507px, 305.8px) scale(0.94);
+    z-index: 1008;
+  }
+  19.44% {
+    transform: translate(390px, 319px) scale(0.96);
+    z-index: 1008;
+  }
+  22.22% {
+    transform: translate(270px, 330px) scale(0.98);
+    z-index: 1008;
+  }
+  25% {
+    transform: translate(150px, 330px) scale(1);
+    z-index: 1008;
+    filter: brightness(65%);
+  }
+  27.78% {
+    transform: translate(30px, 325.6px) scale(0.98);
+    z-index: 1008;
+  }
+  30.56% {
+    transform: translate(-90px, 314.6px) scale(0.96);
+    z-index: 1008;
+  }
+  33.33% {
+    transform: translate(-210px, 286px) scale(0.94);
+    z-index: 1008;
+  }
+  36.11% {
+    transform: translate(-324px, 248.6px) scale(0.92);
+    z-index: 1008;
+  }
+  38.89% {
+    transform: translate(-423px, 206.8px) scale(0.9);
+    z-index: 1008;
+    filter: brightness(70%);
+  }
+  41.67% {
+    transform: translate(-510px, 158.4px) scale(0.88);
+    z-index: 1008;
+  }
+  44.44% {
+    transform: translate(-576px, 103.4px) scale(0.86);
+    z-index: 1008;
+  }
+  47.22% {
+    transform: translate(-624px, 46.2px) scale(0.84);
+    z-index: 1008;
+  }
+  50% {
+    transform: translate(-648px, 0px) scale(0.82);
+    z-index: 1;
+    filter: brightness(80%);
+  }
+  52.78% {
+    transform: translate(-624px, -46.2px) scale(0.8);
+    z-index: 1;
+  }
+  55.56% {
+    transform: translate(-576px, -103.4px) scale(0.78);
+    z-index: 1;
+  }
+  58.33% {
+    transform: translate(-510px, -158.4px) scale(0.76);
+    z-index: 1;
+  }
+  61.11% {
+    transform: translate(-423px, -206.8px) scale(0.74);
+    z-index: 1;
+    filter: brightness(90%);
+  }
+  63.89% {
+    transform: translate(-324px, -248.6px) scale(0.72);
+    z-index: 1;
+  }
+  66.67% {
+    transform: translate(-210px, -286px) scale(0.7);
+    z-index: 1;
+  }
+  69.44% {
+    transform: translate(-90px, -314.6px) scale(0.68);
+    z-index: 1;
+  }
+  72.22% {
+    transform: translate(30px, -325.6px) scale(0.66);
+    z-index: 1;
+  }
+  75% {
+    transform: translate(150px, -330px) scale(0.64);
+    z-index: 1;
+    filter: brightness(110%);
+  }
+  77.78% {
+    transform: translate(270px, -330px) scale(0.66);
+    z-index: 1;
+  }
+  80.56% {
+    transform: translate(390px, -319px) scale(0.68);
+    z-index: 1;
+  }
+  83.33% {
+    transform: translate(507px, -305.8px) scale(0.7);
+    z-index: 1;
+  }
+  86.11% {
+    transform: translate(618px, -266.2px) scale(0.72);
+    z-index: 1;
+  }
+  88.89% {
+    transform: translate(714px, -220px) scale(0.74);
+    z-index: 1;
+    filter: brightness(90%);
+  }
+  91.67% {
+    transform: translate(795px, -169.4px) scale(0.76);
+    z-index: 1;
+  }
+  94.44% {
+    transform: translate(855px, -114.4px) scale(0.78);
+    z-index: 1;
+  }
+  97.22% {
+    transform: translate(888px, -57.2px) scale(0.8);
+    z-index: 1;
+  }
+  100% {
+    transform: translate(900px, 0px) scale(0.82);
+    z-index: 1;
+    filter: brightness(80%);
+  }
+}
+
+@media (max-width: 768px) {
+  .planets {
+    top: 200px;
+    left: 90px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

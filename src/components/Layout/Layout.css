@@ -1,0 +1,64 @@
+.layout header {
+  position: fixed;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  background-color: black;
+  z-index: 3000;
+}
+
+.layout main {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  overflow-y: auto;
+}
+
+.outlet-section {
+  position: absolute;
+  bottom: 220px;
+  max-height: 20vh;
+  margin: auto;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 1.1rem;
+
+  z-index: 2000;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .layout {
+    header {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    main {
+      max-height: 90vh;
+      overflow-y: auto;
+      justify-content: flex-start;
+    }
+  }
+
+  .outlet-section {
+    position: relative;
+    bottom: auto;
+    max-height: none;
+    font-size: 1rem;
+    text-align: center;
+    transform: none;
+    opacity: 1;
+    animation: none;
+  }
+}

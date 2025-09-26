@@ -1,0 +1,35 @@
+#root {
+  max-width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-color: black;
+  background-image: url("/photo-1435224668334-0f82ec57b605.jpeg");
+  background-size: auto;
+  background-position: bottom;
+  background-repeat: repeat;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+#root::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("/star-4773.gif");
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: center;
+
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 1;
+}
+
+body::-webkit-scrollbar,
+#root::-webkit-scrollbar {
+  display: none;
+}
